@@ -42,4 +42,6 @@ Route::get('/alldatapass/{name}/{age}', [allDataPassSystem::class, 'allDataPassi
 Route::Post('/fromdatapass', [fromData::class, 'froDatapassing']);
 //File Upload Data 
 
+// Route::get('/fileuploadsystem', [fileUpload::class, 'fileUploData']);
 Route::Post('/fileuploadsystem', [fileUpload::class, 'fileUploData']);
+
