@@ -44,4 +44,3 @@ Route::Post('/fromdatapass', [fromData::class, 'froDatapassing']);
 
 // Route::get('/fileuploadsystem', [fileUpload::class, 'fileUploData']);
 Route::Post('/fileuploadsystem', [fileUpload::class, 'fileUploData']);
-
