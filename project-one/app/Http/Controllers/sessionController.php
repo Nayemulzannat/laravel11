@@ -16,13 +16,18 @@ class sessionController extends Controller
     function sessionPull(Request $request): string
     {
 
-        return $request->session()->pull('userEmail');
+        return $request->session()->pull(key: 'userEmail', default: 'Default');
+    }
+    function sessionGet(Request $request): string
+    {
+
+        return $request->session()->get(key: 'userEmail', default: 'Default');
     }
 
     function sessionForget(Request $request): bool
     {
 
-        $request->session()->forget('keys', 'userEmail');
+        $request->session()->forget('userEmail');
         return true;
     }
 

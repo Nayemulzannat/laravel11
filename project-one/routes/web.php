@@ -7,6 +7,9 @@ use App\Http\Controllers\headerDataPass;
 use App\Http\Controllers\allDataPassSystem;
 use App\Http\Controllers\fromData;
 use App\Http\Controllers\fileUpload;
+use App\Http\Controllers\sessionController;
+use App\Http\Controllers\demoMiddlewareController;
+use App\Http\Middleware\demoMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +47,17 @@ Route::Post('/fromdatapass', [fromData::class, 'froDatapassing']);
 
 // Route::get('/fileuploadsystem', [fileUpload::class, 'fileUploData']);
 Route::Post('/fileuploadsystem', [fileUpload::class, 'fileUploData']);
+
+
+//Session Rout Start
+
+Route::get('/sessionPut/{email}', [sessionController::class, 'sessionPut']);
+Route::get('/sessionGet', [sessionController::class, 'sessionGet']);
+Route::get('/sessionPull', [sessionController::class, 'sessionPull']);
+Route::get('/sessionForget', [sessionController::class, 'sessionForget']);
+Route::get('/sessionFlash', [sessionController::class, 'sessionFlash']);
+
+
+// Demomiddleware Route
+
+Route::get('/demoMiddllware', [demoMiddlewareController::class, 'demoMiddleware'])->middleware([demoMiddleware::class]);
