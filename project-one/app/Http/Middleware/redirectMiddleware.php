@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class demoMiddleware
+class redirectMiddleware
 {
     /**
      * Handle an incoming request.
@@ -15,11 +15,11 @@ class demoMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $key = $request->header(key: 'key');
+        $key = $request->key;
         if ($key == 'xyz') {
             return $next($request);
         } else {
-            return response()->json(data: 'unauthorized', status: 401);
+            return redirect('/redirectMiddlewaretwo');
         }
     }
 }

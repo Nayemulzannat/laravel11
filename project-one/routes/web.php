@@ -10,6 +10,7 @@ use App\Http\Controllers\fileUpload;
 use App\Http\Controllers\sessionController;
 use App\Http\Controllers\demoMiddlewareController;
 use App\Http\Middleware\demoMiddleware;
+use App\Http\Middleware\redirectMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,3 +62,8 @@ Route::get('/sessionFlash', [sessionController::class, 'sessionFlash']);
 // Demomiddleware Route
 
 Route::get('/demoMiddllware', [demoMiddlewareController::class, 'demoMiddleware'])->middleware([demoMiddleware::class]);
+
+
+Route::get('/redirectMiddleware/{key}', [demoMiddlewareController::class, 'redirectMiddleware'])->middleware([redirectMiddleware::class]);
+
+Route::get('/redirectMiddlewaretwo', [demoMiddlewareController::class, 'redirectMiddlewaretwo']);
