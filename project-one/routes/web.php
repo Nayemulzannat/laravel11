@@ -11,6 +11,8 @@ use App\Http\Controllers\sessionController;
 use App\Http\Controllers\demoMiddlewareController;
 use App\Http\Middleware\demoMiddleware;
 use App\Http\Middleware\redirectMiddleware;
+use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\bladePractice;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,3 +69,12 @@ Route::get('/demoMiddllware', [demoMiddlewareController::class, 'demoMiddleware'
 Route::get('/redirectMiddleware/{key}', [demoMiddlewareController::class, 'redirectMiddleware'])->middleware([redirectMiddleware::class]);
 
 Route::get('/redirectMiddlewaretwo', [demoMiddlewareController::class, 'redirectMiddlewaretwo']);
+
+
+/// Resource Controllers
+Route::resource('photos', PhotoController::class);
+
+
+/// Blade practice
+// Route::get(uri:"/", [bladePractice::class , 'homePage']);
+Route::get('/', [bladePractice::class, 'homePage']);
