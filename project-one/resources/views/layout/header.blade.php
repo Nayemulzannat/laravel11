@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light py-4 shadow-sm">
+<nav class="navbar sticky-top bg-white navbar-expand-lg navbar-light py-4 shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="#">
             <img class="img-fluid" src="bootstrap5-plain-assets/logos/plainb-logo.svg" alt="" width="96px">

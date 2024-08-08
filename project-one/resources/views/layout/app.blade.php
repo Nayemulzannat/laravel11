@@ -12,6 +12,7 @@
 <body>
 
     @include('layout.header')
+    @yield('content')
     @include('layout.footer')
 
     <script src="{{asset('js/bootstrap/bootstrap.bundle.min.js')}}"></script>
