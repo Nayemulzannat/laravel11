@@ -6,9 +6,10 @@ use Illuminate\Http\Request;
 
 class bladePractice extends Controller
 {
-   function homePage(){
+   function homePage()
+   {
 
-    $data =['msg'=>'This is my message'];
-    return view('home',$data);
+      $data = ['msg' => 'This is my message'];
+      return view('home');
    }
 }

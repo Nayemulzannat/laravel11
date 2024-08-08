@@ -77,6 +77,4 @@ Route::resource('photos', PhotoController::class);
 
 /// Blade practice
 // Route::get(uri:"/", [bladePractice::class , 'homePage']);
-// Route::get(uri:"/", [bladePractice::class , 'homePage']);
-// Route::get(uri:"/", [bladePractice::class , 'homePage']);
 Route::get('/', [bladePractice::class, 'homePage']);
