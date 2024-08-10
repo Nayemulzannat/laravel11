@@ -7,4 +7,6 @@
 @include('component.pricing')
 @include('component.team')
 @include('component.newslatter')
+@include('component.newslatter')
+
 @endsection
