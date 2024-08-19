@@ -13,6 +13,7 @@ use App\Http\Middleware\demoMiddleware;
 use App\Http\Middleware\redirectMiddleware;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\bladePractice;
+use App\Http\Controllers\query_builder_practice;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,3 +79,7 @@ Route::resource('photos', PhotoController::class);
 /// Blade practice
 // Route::get(uri:"/", [bladePractice::class , 'homePage']);
 Route::get('/', [bladePractice::class, 'homePage']);
+
+// QueryBuilder Practice Route
+
+Route::get('/querybuilder', [query_builder_practice::class, 'querybuilder']);
